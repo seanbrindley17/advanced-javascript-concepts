@@ -13,6 +13,8 @@ console.log(sum);
 
 
 // Arrow Function With Parameters
+
+// When using arrow functions, use a constant and set it equal to a pair of brackets, then a fat arrow '=>' and then curly brackets with the function body
 const addTwoNumbers2 = (a, b) => {
     
     return a + b;
