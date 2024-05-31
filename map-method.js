@@ -1,4 +1,8 @@
   
+// map()
+// Executes a function on all elements
+
+
 // Using a for loop
 
 // Defines nums as an array
