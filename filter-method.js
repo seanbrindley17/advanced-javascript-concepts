@@ -1,4 +1,9 @@
 
+// filter()
+// Filters unwanted elements out
+
+
+
 // Simple Filtering
 const people = [                    // Creates an array. Each array item is an object with 2 parameters, the name and age of a person 
     {
