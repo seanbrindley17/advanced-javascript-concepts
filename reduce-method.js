@@ -79,3 +79,58 @@ const teamMembers = [                   // teamMembers is an array of objects co
   }, {});          // Initial value is set to an empty value using the 2nd set of curly brackets here
 
   console.log(experienceByProfession);
+
+
+  //-----------------------------------------------------------------------------------------------------
+
+
+  let students = [
+    {
+        name: 'John',
+        subjects: ['maths', 'english', 'cad'],
+        teacher: {maths: 'Harry', english: 'Joan', cad: 'Paul'},
+        results: {maths: 90, english: 75, cad: 87},
+    },
+    {
+        name: 'Emily',
+        subjects: ['science', 'english', 'art'],
+        teacher: {science: 'Iris', english: 'Joan', art: 'Simon'},
+        results: {science: 93, english: 73, art: 95},
+    },
+    {
+        name: 'Adam',
+        subjects: ['science', 'maths', 'art'],
+        teacher: {science: 'Iris', maths: 'Harry', art: 'Simon'},
+        results: {science: 93, english: 88, maths: 97, art: 95},
+    },
+    {
+        name: 'Fran',
+        subjects: ['science', 'english', 'art'],
+        teacher: {science: 'Iris', english: 'Joan', art: 'Simon'},
+        results: {science: 93, english: 87, art: 95},
+    }
+];
+
+  // To find the name of the student with the highest english score and log both name and score using reduce
+  //Creates constant named biggest which will reduce the students array
+  const biggest = students.reduce((acc, cur) => {
+
+    /*
+     The array is iterated through to find the highest english score
+
+    */ 
+    acc = acc.max > cur.results.english ? acc: {name:cur.name, max:cur.results.english};
+    return acc;
+    }, {name: '', max: 0});  // Initial values are a blank string for name and max: 0 for score
+console.log(biggest);
+
+/* Using destructuring 
+const biggest = students.reduce(({max, name}, {name:n, results:{english}}) => {
+    if(max < english) {
+        acc = {name:n, max: english};
+    }
+    return acc;
+    }, {name: '', max: 0});
+    
+console.log(biggest);
+*/
