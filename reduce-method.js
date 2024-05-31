@@ -1,4 +1,8 @@
 
+// reduce()
+// Reduces all element to a single output
+
+
 // Summing an array of numbers:
 
 const nums = [0, 1, 2, 3, 4];        // defines nums as a simple array of numbers
